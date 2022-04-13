@@ -1,0 +1,37 @@
+#navbar {
+  display: flex;
+
+  padding: 0.5%;
+
+  background-color: var(--tertiary);
+}
+
+#navbar form {
+  width: 100%;
+}
+
+#navbar form input {
+  padding: 0.2% 0.6%;
+
+  border: solid 1px var(--primary);
+  border-radius: 8px;
+}
+
+#data {
+  margin: 0.5% 0%;
+  width: 98%;
+}
+
+#modes,
+#modules {
+  width: 15%;
+}
+
+#simulate {
+  padding: 0%;
+  margin-left: auto;
+
+  border: none;
+  border-radius: 8px;
+  background-color: var(--secondary);
+}

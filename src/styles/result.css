@@ -1,0 +1,27 @@
+#result {
+  width: 20vw;
+
+  padding: 0.8%;
+  margin: 5vh auto;
+
+  border-radius: 8px;
+  background-color: var(--secondary);
+}
+
+#result hr {
+  width: 80%;
+  margin: 5px 0%;
+}
+
+#result h2 {
+  font-size: larger;
+  line-height: 40px;
+}
+
+#result p {
+  display: flex;
+}
+
+#result p span {
+  margin-left: auto;
+}
