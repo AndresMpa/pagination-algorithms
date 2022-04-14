@@ -1,9 +1,9 @@
-import { getForm } from './util/getter.js';
+import { makeSimulate } from './simulation/simulator.js';
+import { getForm } from "./util/getter.js";
 
-const simulate = document.querySelector("#simulate")
+const simulate = document.querySelector("#simulate");
 
 simulate.onclick = () => {
-  getForm()
-}
-
-
+  let form = getForm();
+  makeSimulate(form)
+};
