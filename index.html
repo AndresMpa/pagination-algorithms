@@ -20,12 +20,22 @@
   <body>
     <nav id="navbar">
       <form>
-        <input type="text" name="data" id="data" placeholder="Process separated by commas: 1,7,6,0"/>
-        <input type="number" name="modules" id="modules" placeholder="Modules: 3"/>
+        <input
+          type="text"
+          id="process"
+          name="process"
+          placeholder="Process separated by commas: 1,7,6,0"
+        />
+        <input
+          id="modules"
+          type="number"
+          name="modules"
+          placeholder="Modules: 3"
+        />
         <select name="modes" id="modes">
-          <option value="Optimo">Optimo</option>
-          <option value="FIFO">FIFO</option>
-          <option value="LRU">LRU</option>
+          <option value="optimum">Optimum</option>
+          <option value="fifo">FIFO</option>
+          <option value="lru">LRU</option>
         </select>
       </form>
       <button id="simulate">
@@ -38,13 +48,13 @@
       <h2>Results</h2>
       <article>
         <div>
-          <p>Failutes: <span>21</span></p>
-          <p>Correct: <span>12</span></p>
+          <p>Failures: <span></span></p>
+          <p>Success: <span></span></p>
           <hr />
-          <p>Total: <span>54</span></p>
+          <p>Total: <span></span></p>
         </div>
       </article>
     </section>
-    <script src="./src/main.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
