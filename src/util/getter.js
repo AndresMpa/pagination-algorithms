@@ -5,7 +5,7 @@ const modes = document.querySelector("#modes");
 export const getForm = () => {
   return {
     process: process.value.replaceAll(/\s/g, ""),
-    modules: modules.value,
+    modules: parseInt(modules.value),
     mode: modes.value,
   };
 };
