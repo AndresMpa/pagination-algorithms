@@ -1,11 +1,11 @@
-const data = document.querySelector("#data")
+const process = document.querySelector("#process");
+const modules = document.querySelector("#modules");
+const modes = document.querySelector("#modes");
 
 export const getForm = () => {
-  console.log(data.value);
-  
   return {
-    arr: [],
-    modules: 1,
-    mode: "FIFO",
+    process: process.value.replaceAll(/\s/g, ""),
+    modules: modules.value,
+    mode: modes.value,
   };
 };
