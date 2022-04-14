@@ -35,3 +35,28 @@
   border-radius: 8px;
   background-color: var(--secondary);
 }
+
+@media screen and (max-width: 800px) {
+  #navbar {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #navbar form {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  #modes,
+  #modules {
+    width: auto;
+    margin: 0.8%;
+  }
+
+  #simulate {
+    padding: 1.2%;
+    margin: 1.2% auto;
+    width: initial;
+  }
+}

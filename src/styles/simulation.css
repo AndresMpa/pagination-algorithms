@@ -1,0 +1,42 @@
+#main {
+  margin: auto;
+  width: 98%;
+
+  white-space: nowrap;
+  overflow: auto;
+}
+
+table {
+  max-width: 95vw;
+  margin: 1.5% auto;
+  padding: 0.25% 0.5%;
+
+  background-color: var(--tertiary);
+  border-radius: 8px;
+}
+
+thead,
+tbody {
+  display: flex;
+
+  margin: 1.2% 0%;
+
+  background-color: var(--secondary);
+  border-radius: 8px;
+}
+
+tbody tr {
+  display: flex;
+  flex-direction: column;
+}
+
+thead th,
+tbody td {
+  font-size: larger;
+  font-weight: 100;
+  padding: 3px;
+}
+
+.failure {
+  border-bottom: solid 2px var(--letter);
+}

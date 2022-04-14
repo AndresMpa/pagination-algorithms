@@ -25,3 +25,9 @@
 #result p span {
   margin-left: auto;
 }
+
+@media screen and (max-width: 800px) {
+  #result {
+    width: 90vw;
+  }
+}
