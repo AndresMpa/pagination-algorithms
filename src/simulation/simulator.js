@@ -1,3 +1,5 @@
+import { simulateFifo } from "./algorithms.js";
+
 const drawHeader = (header, table) => {
   let thead = document.createElement("thead");
   header.forEach((item) => {
@@ -8,24 +10,27 @@ const drawHeader = (header, table) => {
   table.appendChild(thead);
 };
 
-const simulationMode = (process, modules, mode) => {
+const simulationMode = (process, modules, mode, table) => {
+  let result;
   switch (mode) {
     case "optimum": {
-      console.log(process, modules);
+      console.log(process, modules, table);
+      result = [0, 0];
       break;
     }
     case "fifo": {
-      console.log(process, modules);
+      result = simulateFifo(process, modules, table);
       break;
     }
     case "lru": {
-      console.log(process, modules);
+      console.log(process, modules, table);
+      result = [0, 0];
       break;
     }
   }
 
   return [
-    //failures 
+    //failures
     result[0],
     //success
     result[1],
@@ -60,7 +65,8 @@ export const makeSimulate = (simulationData) => {
   let result = simulationMode(
     process,
     simulationData["modules"],
-    simulationData["mode"]
+    simulationData["mode"],
+    table
   );
   drawSimulation(table);
 
