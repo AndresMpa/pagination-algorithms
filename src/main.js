@@ -7,3 +7,9 @@ simulate.onclick = () => {
   let form = getForm();
   makeSimulate(form)
 };
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/serviceWorker.js").catch((error) => {
+    console.error(error.message);
+  })
+}
