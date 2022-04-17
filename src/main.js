@@ -5,6 +5,7 @@ const simulate = document.querySelector("#simulate");
 
 simulate.onclick = () => {
   let form = getForm();
+  console.log(form);
   makeSimulate(form)
 };
 
