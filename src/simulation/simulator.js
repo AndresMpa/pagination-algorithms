@@ -10,11 +10,47 @@ const drawHeader = (header, table) => {
   table.appendChild(thead);
 };
 
+const handleBelamy = (process, currentModules, currentSimulationFailures) => {
+  try {
+    let current = document.querySelector(
+      "#result article div p span"
+    ).innerHTML;
+    let belamy = JSON.parse(localStorage.getItem("belamy"));
+
+    if (
+      belamy["process"] === process.join(",") &&
+      belamy["modules"] < currentModules &&
+      parseInt(current) < currentSimulationFailures
+    ) {
+      try {
+        Swal.fire(
+          "Wow, it's Belamy!",
+          "This chain suffers from the Belady anomaly",
+          "info"
+        );
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const simulationMode = (process, modules, mode, table) => {
   let result;
   switch (mode) {
     case "optimum": {
       console.log(process, modules, table);
+      try {
+        Swal.fire(
+          "Working on it",
+          "I'm not getting pay for this, give me time",
+          "info"
+        );
+      } catch (error) {
+        console.log(error.message);
+      }
       result = [0, 0];
       break;
     }
@@ -24,10 +60,21 @@ const simulationMode = (process, modules, mode, table) => {
     }
     case "lru": {
       console.log(process, modules, table);
+      try {
+        Swal.fire(
+          "Working on it",
+          "I'm not getting pay for this, give me time",
+          "info"
+        );
+      } catch (error) {
+        console.log(error.message);
+      }
       result = [0, 0];
       break;
     }
   }
+
+  handleBelamy(process, modules, result[0]);
 
   return [
     //failures
@@ -36,8 +83,6 @@ const simulationMode = (process, modules, mode, table) => {
     result[1],
     //total
     process.length,
-    //belamy
-    localStorage.getItem("belamy"),
   ];
 };
 

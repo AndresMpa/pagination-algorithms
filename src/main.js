@@ -5,8 +5,8 @@ const simulate = document.querySelector("#simulate");
 
 simulate.onclick = () => {
   let form = getForm();
-  console.log(form);
   makeSimulate(form)
+  localStorage.setItem("belamy", JSON.stringify(form));
 };
 
 if ("serviceWorker" in navigator) {
